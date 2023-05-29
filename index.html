@@ -9,25 +9,35 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-        <img src="img/icon.jpg" width="50" height="50" style="border-radius: 10px;">
-          <div class="collapse navbar-collapse ml-2" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="servicios_registrados.php">Quienes somos </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="recarga_combustible.php"> Contactanos</a>
-                </li>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#"> </a>
-              </li>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Thirteenth navbar example">
+    <div class="container-fluid">
+      <div class="collapse navbar-collapse d-lg-flex" id="navbarsExample11">
+        <a class="navbar-brand col-lg-3 me-0" href="#"><img src="img/icon.jpg" width="40" height="40" style="border-radius: 10px;">
+          </a>
+        <ul class="navbar-nav col-lg-6 justify-content-lg-center">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="calendario.html">
+              Calendario de Reserva
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contactanos</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Tu cuenta</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Editar Perfil</a></li>
+              <li><a class="dropdown-item" href="#">Cambiar Club</a></li>
+              <li><a class="dropdown-item" href="#">Reservas en curso</a></li>
             </ul>
-          </div>
-          <a class="btn btn-outline-success active" aria-current="page" href="index.html">Salir</a>
+          </li>
+        </ul>
+        <div class="d-lg-flex col-lg-3 justify-content-lg-end">
+          <a class="btn btn-danger" href="index.html">Salir</a>
         </div>
-      </nav>
+      </div>
+    </div>
+  </nav>
     <img src="img/cancha_login.jpg"  width="100%" height="100%" >
     <div class="card-img-overlay mt-5 p-5 m-5">
         <form action="recursos/funciones/login.php" class="mt-5" method="post">

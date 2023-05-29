@@ -12,7 +12,7 @@ if (isset($_POST['btn_login'])){
 $resultado = json_decode($Logins->login($arregloLogin));
 if ($resultado->estado == true){
     if($resultado->perfil == "Administrador"){
-        header('location:../../inicioAdmin.php');
+        header('location:../../admin.html');
     }else{
         header('location:../../inicioUser.php');
     }
