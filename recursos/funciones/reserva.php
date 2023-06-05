@@ -14,12 +14,15 @@ if (isset($_POST['btn_reservar'])){
     'fechaReserva' => $fechaReserva
     );
 
-    $ReservaRealizada = json_decode($reserva->guardarReserva($arregloReserva));
-    if ($resultado->estado == true){
-        if($resultado->perfil == "Administrador"){
-            header('location:../../admin.html');
+    $ReservaRealizada = json_decode($reservas->guardarReserva($arregloReserva));
+
+
+    if ($ReservaRealizada->estado == true){
+        if($ReservaRealizada->estado == true){
+            header('location:../../calendario.php?id='.$ReservaRealizada->ultimo.'&fecha='.$ReservaRealizada->fechaReserva);
+            // CONCADENAR VARIABLES
         }else{
-            header('location:../../inicioUser.php');
+            header('location:../../calendario.php');
         }
     }
 }

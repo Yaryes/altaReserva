@@ -17,46 +17,41 @@
         <ul class="navbar-nav col-lg-6 justify-content-lg-center">
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="calendario.html">
-              Calendario de Reserva
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Contactanos</a>
           </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Tu cuenta</a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Editar Perfil</a></li>
-              <li><a class="dropdown-item" href="#">Cambiar Club</a></li>
-              <li><a class="dropdown-item" href="#">Reservas en curso</a></li>
-            </ul>
-          </li>
         </ul>
         <div class="d-lg-flex col-lg-3 justify-content-lg-end">
-          <a class="btn btn-danger" href="index.html">Salir</a>
+          <a class="nav-link text-light " aria-current="page" href="calendario.html">
+            📍 Av. República de Croacia, Antofagasta
+          </a>
         </div>
       </div>
     </div>
   </nav>
-    <img src="img/cancha_login.jpg"  width="100%" height="100%" >
-    <div class="card-img-overlay mt-5 p-5 m-5">
-        <form action="recursos/funciones/login.php" class="mt-5" method="post">
+    <img src="img/fondo1cancha.avif"  width="100%" height="100%" >
+    <div class="card-img-overlay mt-5 p-5 m-2">
+      <div class="row justify-content-center ">
+        <form action="recursos/funciones/login.php" class="mt-2 w-50 " method="post">
             <div class="card-login text-dark shadow-lg" style="background-color: rgba(211, 211, 211, 0.815);">
-                <div class="card-header h2">Inico de Sesión</div>
+                <div class="card-header h2 text-center">Inico de Sesión</div>
                     <div class="card-body">
                         <div class="form-group">
-                            <label for="correo">CORREO:</label>
+                            <label for="correo">Correo :</label>
                             <input required type="text"  class="form-control" placeholder="Ingrese usuario" name="correo" id="correo">
                         </div>    
                         <div class="form-group">
-                            <label for="pass">CONTRASEÑA:</label>
+                            <label for="pass">Contraseña :</label>
                             <input required type="password" class="form-control" placeholder="Ingrese contraseña"  name="pass" id="pass">
                         </div>
-                        <input class="btn btn-success btn-block" type="submit" value="Ingresar"  name="btn_login" >       
+                        <input class="btn btn-success btn-block mt-3" type="submit" value="Ingresar"  name="btn_login" >       
                         </div>
                     </div>
-                </form>
-            </div>
+          </form>
+      </div>   
+    </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>

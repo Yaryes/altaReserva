@@ -10,9 +10,11 @@ if (isset($_POST['btn_login'])){
 );
 
 $resultado = json_decode($Logins->login($arregloLogin));
+
 if ($resultado->estado == true){
     if($resultado->perfil == "Administrador"){
-        header('location:../../admin.html');
+        $_SESSION['user']['nombre']= $resultado->nombre;
+        header('location:../../inicioAdm.php');
     }else{
         header('location:../../inicioUser.php');
     }
