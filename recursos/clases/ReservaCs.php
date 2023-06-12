@@ -12,14 +12,16 @@ class Reserva extends Conexion{
       
         $data = (count(func_get_args()) > 0) ? func_get_args()[0] : func_get_args();
 
-        $sqlReseva = "INSERT INTO `reserva` (idReserva, cantidad_persona, fechaReserva, serieReserva, clubReserva) 
-            VALUES (NULL,?,?,?,?);";
+        $sqlReseva = "INSERT INTO `reserva` (idReserva, cantidad_persona, fechaReserva, serieReserva, clubReserva, id) 
+            VALUES (NULL,?,?,?,?,?);";
         $ingresarReserva = $this->prepare($sqlReseva);
         $cantidad_persona = utf8_decode($data['cantidad_persona']);
         $fechaReserva = utf8_decode($data['fechaReserva']);
         $serieReserva = utf8_decode($data['serieReserva']);
         $clubReserva = utf8_decode($data['clubReserva']);
-        $ingresarReserva->bind_param('isss', $cantidad_persona, $fechaReserva, $serieReserva, $clubReserva);
+        $id = utf8_decode($data['idUsuario']);
+        // var_dump($data['idUsuario']);exit;
+        $ingresarReserva->bind_param('isssi', $cantidad_persona, $fechaReserva, $serieReserva, $clubReserva, $id);
         $ingresarReserva->execute();
         $ingresarReserva->close();
         //RESCATAMOS EL ULTIMO ID INGRESADO PARA REENVIARLO HACIA LA VISTA
@@ -41,6 +43,7 @@ class Reserva extends Conexion{
                 'fechaReserva' => $fechaReserva,
                 'mensaje'=> '<b>LA RESERRVA FUE REALIZADA </b>'
             ); 
+            // var_dump($info);exit;
         return json_encode($info);
         }
     }
@@ -49,14 +52,18 @@ class Reserva extends Conexion{
 
 
         $data = (count(func_get_args()) > 0) ? func_get_args()[0] : func_get_args();
-        $sqlCargarReservas = "SELECT * FROM reserva;";
+      
+        $sqlCargarReservas = "SELECT idReserva, clubReserva, serieReserva, cantidad_persona ,fechaReserva FROM reserva;";
+        
         $consultaReservas = $this->prepare($sqlCargarReservas);
         $consultaReservas->execute();
         $consultaReservas->bind_result($idReserva, $clubReserva, $serieReserva, $cantidad_persona, $fechaReserva); 
+   
         $resultSet = $consultaReservas->get_result();
+       
         
         $data = $resultSet->fetch_all(MYSQLI_ASSOC);
-        // var_dump($data);
+
         return json_encode($data);
       
       

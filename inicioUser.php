@@ -8,6 +8,7 @@ if (isset($_GET['msg'])) {
 } else {
   $msg = "";
 }
+
 ?> 
 
 <div class="row ">

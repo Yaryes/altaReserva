@@ -1,99 +1,93 @@
 <?php
 session_start();
-// include('recursos/clases/ReservaCs.php');
 include('recursos/template/header.php');
 include('recursos/template/navAdm.php');
 if($_SESSION ['user']['nombre']!=null){
 ?>
 
-<div class="container mt-5 pt-4">
-    <div class="row align-items-end mb-4 pb-2">
+<div class="container mt-2 pt-4">
+    <div class="row align-items-end ">
         <div class="col-md-8">
             <div class="section-title text-center text-md-start">
-                <h3 class="title mb-4">Seleccione el Club</h3>
-                <p class="text-muted mb-0 para-desc">Start work with Leaping. Build responsive, mobile-first projects on the web with the world's most popular front-end component library.</p>
-            </div>
-        </div><!--end col-->
-
-        <div class="col-md-4 mt-4 mt-sm-0 d-none d-md-block">
-            <div class="text-center text-md-end">
-                <a href="#" class="text-primary">View more Jobs <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right fea icon-sm"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
-            </div>
-        </div><!--end col-->
-    </div><!--end row-->
-
+                <p class="h3">Seleccione el Club </p>
+             </div>
+        </div>
+    </div>
     <div class="row">
-        <div class="col-lg-4 col-md-6 col-12 mt-4 pt-2">
+        <div class="col-6 mt-1 p-3">
             <div class="card border-0 bg-light rounded shadow">
-                <div class="card-body p-4">
-                <div><img src="img/escudo.jpg" alt="" class="avatar-md rounded-circle img-thumbnail" /></div>
-                    <h5>Anaex</h5>
-                    <div class="mt-3">
-                        <span class="text-muted d-block"><i class="fa fa-home" aria-hidden="true"></i> <a href="#" target="_blank" class="text-muted">Bootdey.com LLC.</a></span>
-                        <span class="text-muted d-block"><i class="fa fa-map-marker" aria-hidden="true"></i> USA</span>
-                    </div>
-                    
-                    <div class="mt-3">
-                        <a href="#" class="btn btn-primary">Ver Jugadores</a>
-                    </div>
+                <div class="card-body p-5">
+                    <form  action="recursos/funciones/jugadores_fx.php" method="post" >
+                        <div>
+                            <img src="img/escudo4.jpg" alt="" class="avatar-md w-25 rounded-circle img-thumbnail" />
+                        </div>
+                        <b><h5>Enaex</h5></b>
+                        <input type="hidden" name="clubReserva" value="Enaex">
+                        <div class="mt-3">
+                            <span class="text-muted d-block"><i class="fa fa-map-marker" aria-hidden="true"></i> 📍 Av. República de Croacia, Antofagasta</span>
+                        </div>
+                        <div class="mt-3">
+                            <button type="summit" name="btn_jugEnaex" value="btn_jugEnaex" class="btn btn-dark">Ver Jugadores</button>
+                        </div>
+                    </form>
                 </div>
             </div>
-        </div><!--end col-->
-        
-        <div class="col-lg-4 col-md-6 col-12 mt-4 pt-2">
+        </div>
+        <div class="col-6 mt-1 p-3">
             <div class="card border-0 bg-light rounded shadow">
                 <div class="card-body p-4">
-                <div><img src="img/escudo2.jpg"  alt="" class="avatar-md rounded-circle img-thumbnail w-25" /></div>
-                    <h5>Abemarle</h5>
-                    <div class="mt-3">
-                        <span class="text-muted d-block"><i class="fa fa-home" aria-hidden="true"></i> <a href="#" target="_blank" class="text-muted">Bootdey.com LLC.</a></span>
-                        <span class="text-muted d-block"><i class="fa fa-map-marker" aria-hidden="true"></i> USA</span>
-                    </div>
-                    
-                    <div class="mt-3">
-                        <a href="#" class="btn btn-primary">Ver Jugadores</a>
-                    </div>
+                    <form  action="recursos/funciones/jugadores_fx.php" method="post" >
+                        <div>
+                            <img src="img/escudo2.jpg" alt="" class="avatar-md w-25 rounded-circle img-thumbnail" />
+                        </div>
+                        <b><h5>Abemarle</h5></b>
+                        <div class="mt-3 mb-4 ">
+                            <span class="text-muted d-block"><i class="fa fa-map-marker" aria-hidden="true"></i> 📍 Av. República de Croacia, Antofagasta</span>
+                        </div>
+                        <div class="mt-3 mb-4 ">
+                            <!-- <a href="jugadoresClub.php">Button</a> -->
+                            <button type="summit" name="btn_jugAbemarle" class="btn btn-dark">Ver Jugadores</button>
+                        </div>
+                    </form>
                 </div>
             </div>
-        </div><!--end col-->
-        
-        <div class="col-lg-4 col-md-6 col-12 mt-4 pt-2">
+        </div>
+        <div class="col-6 mt-1 p-3">
             <div class="card border-0 bg-light rounded shadow">
                 <div class="card-body p-4">
-                <div><img src="img/escudo3.jpg"  alt="" class="avatar-md rounded-circle img-thumbnail w-25" /></div>
-                    <h5>Cyen Capacitaciones</h5>
-                    <div class="mt-3">
-                        <span class="text-muted d-block"><i class="fa fa-home" aria-hidden="true"></i> <a href="#" target="_blank" class="text-muted">Bootdey.com LLC.</a></span>
-                        <span class="text-muted d-block"><i class="fa fa-map-marker" aria-hidden="true"></i> USA</span>
-                    </div>
-                    
-                    <div class="mt-3">
-                        <a href="#" class="btn btn-primary">Ver Jugadores</a>
-                    </div>
+                    <form  action="recursos/funciones/.php" method="post" >
+                        <div>
+                            <img src="img/escudo3.jpg" alt="" class="avatar-sm w-25 rounded-circle img-thumbnail" />
+                        </div>
+                        <b><h5>Cyen Capacitaciones</h5></b>
+                        <div class="mt-3">
+                            <span class="text-muted d-block"><i class="fa fa-map-marker" aria-hidden="true"></i> 📍 Av. República de Croacia, Antofagasta</span>
+                        </div>
+                        <div class="mt-3">
+                            <button type="summit" name="btn_jugCyen" class="btn btn-dark">Ver Jugadores</button>
+                        </div>
+                    </form>
                 </div>
             </div>
-        </div><!--end col-->
-        
-        <div class="col-lg-4 col-md-6 col-12 mt-4 pt-2">
+        </div>
+        <div class="col-6 mt-1 p-3 ">
             <div class="card border-0 bg-light rounded shadow">
                 <div class="card-body p-4">
-                <div><img src="img/escudo4.jpg"  alt="" class="avatar-md rounded-circle img-thumbnail w-25" /></div>
-                    <h5>Ladies</h5>
-                    <div class="mt-3">
-                        <span class="text-muted d-block"><i class="fa fa-home" aria-hidden="true"></i> <a href="#" target="_blank" class="text-muted">Bootdey.com LLC.</a></span>
-                        <span class="text-muted d-block"><i class="fa fa-map-marker" aria-hidden="true"></i> USA</span>
-                    </div>
-                    
-                    <div class="mt-3">
-                        <a href="#" class="btn btn-primary">Ver Jugadores</a>
-                    </div>
+                    <form  action="recursos/funciones/jugadores_fx.php" method="post" >
+                        <div>
+                            <img src="img/escudo.jpg" alt="" class="avatar-sm mb-4 rounded-circle img-thumbnail" />
+                        </div>
+                        <b><h5>Ladies</h5></b>
+                        <div class="mt-3 mb-4">
+                            <span class="text-muted d-block "><i class="fa fa-map-marker" aria-hidden="true"></i> 📍 Av. República de Croacia, Antofagasta</span>
+                        </div>
+                        <div class="mt-3 mb-4">
+                            <button type="summit" name="btn_jugLadies" class="btn btn-dark">Ver Jugadores</button>
+                        </div>
+                    </form>
                 </div>
             </div>
-        </div><!--end col-->
-
-        <div class="col-12 mt-4 pt-2 d-block d-md-none text-center">
-            <a href="#" class="btn btn-primary">View more Jobs <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right fea icon-sm"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
-        </div><!--end col-->
+        </div>
     </div><!--end row-->
 </div>
 <?php
