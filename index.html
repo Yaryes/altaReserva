@@ -1,57 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alta Reserva</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Thirteenth navbar example">
-    <div class="container-fluid">
-      <div class="collapse navbar-collapse d-lg-flex" id="navbarsExample11">
-        <a class="navbar-brand col-lg-3 me-0" href="#"><img src="img/icon.jpg" width="40" height="40" style="border-radius: 10px;">
-          </a>
-        <ul class="navbar-nav col-lg-6 justify-content-lg-center">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="">
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Contactanos</a>
-          </li>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Alta Reserva</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
+        <style>
+            .overlay-container {
+              background-color: rgba(255, 255, 255, 0.797);
+     
+              position: relative;
+  
+            }
+          </style>
+    </head>
+    <body style="background-image: url(img/fondocancha.jpg);  background-size: cover; background-position: center;" >
+         <nav class="navbar navbar-expand-lg rounded" style="background-color: rgba(222, 222, 221, 0.913);">
+        <div class="container-fluid ">
+        <div class="collapse navbar-collapse d-lg-flex">
+        <a class="navbar-brand col-lg-3 me-0" href="#">
+        </a>
+        <ul class="navbar-nav col-lg-6 justify-content-lg-center ">
+        <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="">
+        </a>
+        </li>
+        <li class="nav-item">
+            <p class="h5">📍 Av. República de Croacia, Antofagasta</p>
+        </li>
         </ul>
-        <div class="d-lg-flex col-lg-3 justify-content-lg-end">
-          <a class="nav-link text-light " aria-current="page" href="">
-            📍 Av. República de Croacia, Antofagasta
-          </a>
         </div>
-      </div>
-    </div>
-  </nav>
-  <img src="img/fondo1cancha.avif"  width="100%" height="100%" >
-  <div class="card-img-overlay mt-5 p-5 m-2">
-    <div class="row justify-content-center ">
-      <form action="recursos/funciones/login.php" class="mt-2 w-50 " method="post">
-        <div class="card-login text-dark shadow-lg" style="background-color: rgba(211, 211, 211, 0.815);">
-          <div class="card-header h2 text-center">Inico de Sesión</div>
-          <div class="card-body">
-            <div class="form-group">
-                <label for="correo">Correo :</label>
-                <input required type="text"  class="form-control" placeholder="Ingrese usuario" name="correo" id="correo">
-            </div>    
-            <div class="form-group">
-                <label for="pass">Contraseña :</label>
-                <input required type="password" class="form-control" placeholder="Ingrese contraseña"  name="pass" id="pass">
+        </div>
+        </nav>
+        <div class="container overlay-container" style=" position: relative;">
+            <!-- <img src="img/pista-tenis.jpg" class="overlay" > -->
+            <div class="row shadow-lg mt-5">
+                <div class="col-6">
+                <img  src="img/logo2.png"width="100%" height="100%" >  
+                </div>
+                <div class="col m-5 ">
+                    <div class="p-5 mt-3 ml-5 text-center bg-body-tertiary" >
+                        <h1 class="display-5 fw-normal">Sistema de Reservas</h1>
+                        <p class="">Agenda tu reserva con la mayor facilidad, tu opinion nos cuenta</p>
+                        <a class="btn btn-outline-secondary" href="inicio.php">Ingresar</a>
+                        <div class="product-device shadow-sm d-none d-md-block"></div>
+                        <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
+                    </div> 
+                </div>
             </div>
-            <input class="btn btn-success btn-block mt-3" type="submit" value="Ingresar"  name="btn_login" >       
-          </div>
         </div>
-      </form>
-    </div>   
-  </div>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-</body>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    </body>
 </html>

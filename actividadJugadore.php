@@ -7,9 +7,9 @@ if($_SESSION ['user']['nombre']!=null){
 
 <div class="container mt-2 pt-4">
     <div class="row align-items-end ">
-        <div class="col-md-8">
-            <div class="section-title text-center text-md-start">
-                <p class="h3">Seleccione el Club </p>
+        <div class="col-12">
+            <div class="section-title text-md-start">
+                <p class="h3 text-center"><b>Equipos Asociados</b> </p>
              </div>
         </div>
     </div>
@@ -55,7 +55,7 @@ if($_SESSION ['user']['nombre']!=null){
         <div class="col-6 mt-1 p-3">
             <div class="card border-0 bg-light rounded shadow">
                 <div class="card-body p-4">
-                    <form  action="recursos/funciones/.php" method="post" >
+                    <form  action="recursos/funciones/jugadores_fx.php" method="post" >
                         <div>
                             <img src="img/escudo3.jpg" alt="" class="avatar-sm w-25 rounded-circle img-thumbnail" />
                         </div>

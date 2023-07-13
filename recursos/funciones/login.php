@@ -17,8 +17,11 @@ if ($resultado->estado == true){
         
         header('location:../../inicioAdm.php');
     }else{
-        $_SESSION['user']['nombre']= $resultado->nombre;
         $_SESSION['user']['idUsuario']= $resultado->idUsuario;
+        $_SESSION['user']['nombre']= $resultado->nombre;
+        $_SESSION['user']['apellido']= $resultado->apellido;
+        $_SESSION['user']['idUsuario']= $resultado->idUsuario;
+        $_SESSION['user']['club']= $resultado->club;
         header('location:../../inicioUser.php');
     }
 }else{

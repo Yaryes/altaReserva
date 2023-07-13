@@ -1,32 +1,51 @@
 <?php
 session_start();
 include('../clases/ReservaCs.php');
-    // var_dump($_POST);exit;
+
 if (isset($_POST['btn_reservar'])){
+    $id = $_POST['id'];
+    $cancha = $_POST['cancha'];
+    $clubReserva =  $_POST['clubReserva'];
     $cantidad_persona =  $_POST['cantidad_persona'];
-    $clubReserva = $_POST['clubReserva'];
     $serieReserva =  $_POST['serieReserva'];
     $fechaReserva = $_POST['fechaReserva'];
-    $fechaReserva = $_POST['fechaReserva'];
-    $idUsuario = $_POST['id'];
+    $estado = $_POST['estado'];
     $arregloReserva = array(
-    'cantidad_persona' => $cantidad_persona,
-    'clubReserva' => $clubReserva,
-    'serieReserva' => $serieReserva,
-    'fechaReserva' => $fechaReserva,
-    'idUsuario' => $idUsuario
+        'id' => $id,
+        'cancha' => $cancha,
+        'cantidad_persona' => $cantidad_persona,
+        'clubReserva' => $clubReserva,
+        'serieReserva' => $serieReserva,
+        'estado' => $estado,
+        'fechaReserva' => $fechaReserva
     );
-    // var_dump($arregloReserva);exit;
-    $ReservaRealizada = json_decode($reservas->guardarReserva($arregloReserva));
-    
-
-    if ($ReservaRealizada->estado == true){
-        if($ReservaRealizada->estado == true){
-            header('location:../../calendario.php?id='.$ReservaRealizada->ultimo.'&fecha='.$ReservaRealizada->fechaReserva);
-            // CONCADENAR VARIABLES
+    if (empty($fechaReserva) || empty($serieReserva)) {
+        $mensaje = "<div class='alert alert-danger h4'>Todos los campos son obligatorios</div>";
+        header('location: ../../reservarCancha.php?msg='.$mensaje);
         }else{
-            header('location:../../calendario.php');
+        $ReservaRealizada = json_decode($reservas->guardarReserva($arregloReserva));
+        if ($ReservaRealizada->estado2 == true){
+            if($ReservaRealizada->estado2 == true){
+                header('location:../../calendario2.php?id='.$ReservaRealizada->ultimo.
+                '&fecha='.$ReservaRealizada->fechaReserva.
+                '&msg='.$ReservaRealizada->mensaje);
+            }else{
+                header('location:../../calendario2.php');
+            }
         }
+    }
+}
+if (isset($_POST['boton_eliminar'])){
+    $idReserva = $_POST['idReserva'];
+    $arregloReservaEliminar = array(
+        'idReserva' => $idReserva
+    );
+   
+    $ReservaRealizada = json_decode($reservas->eliminarReserva($arregloReservaEliminar));
+    if($ReservaRealizada->estado == true){
+        header('location:../../reservasRegistradas.php?msg='.$ReservaRealizada->mensaje);
+    }else{
+        header('location:../../calendario.php');
     }
 }
 ?>

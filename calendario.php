@@ -6,14 +6,17 @@ include('recursos/template/navUser.php');
 if (isset($_GET['id'])) {
   $codigo = $_GET['id'];
   $fechaReserva = $_GET['fecha'];
+  $msg = $_GET['msg'];
   $params = array(
       'codigo' => $codigo,
-      'fechaReserva' => $fechaReserva
+      'fechaReserva' => $fechaReserva,
+      'msg' => $msg
   );
 
 } else {
   $idReserva = "";
   $fechaReserva = "";
+  $msg = "";
 }
 ?> 
 <!-- PONER MENSAJE DE DIA ERRONEO -->
@@ -422,6 +425,7 @@ if (isset($_GET['id'])) {
                       $dia = date_format(date_create($fechaReserva), 'd');
                       if($dia == 24){
                         echo $hora; 
+                        echo $msg;
                       }else{
                       // echo $fechaReserva; 
                       }
